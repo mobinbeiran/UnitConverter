@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UnitConverter.MainPage" Title="مبدل واحدات" 
+             BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}">
+
+    <VerticalStackLayout Margin="15"> <!-- main menu -->
+        
+        <!-- 1st row -->
+        <Grid RowDefinitions="*, *" ColumnDefinitions="*, *, *" Padding="15">
+            
+            <ImageButton Source="length.png" Grid.Column="0" Grid.Row="0" Aspect="Center" Clicked="ImageButton_Clicked" 
+                         SemanticProperties.Description="lenght"/>
+            <Label Text="طول" Grid.Column="0" Grid.Row="1" Style="{StaticResource Key=MainMenuLabel}"/>
+                  
+            <ImageButton Source="power.png" Grid.Column="1" Grid.Row="0" Aspect="Center" Clicked="ImageButton_Clicked_1"
+                         SemanticProperties.Description="power"/>
+            <Label Text="قدرت" Grid.Column="1" Grid.Row="1" Style="{StaticResource Key=MainMenuLabel}"/>
+                  
+            <ImageButton Source="heat.png" Grid.Column="2" Grid.Row="0" Aspect="Center" Clicked="ImageButton_Clicked_2"
+                         SemanticProperties.Description="temperature"/>
+            <Label Text="حرارت" Grid.Column="2" Grid.Row="1" Style="{StaticResource Key=MainMenuLabel}"/>
+        </Grid>
+
+        <!-- 2nd row -->
+        <Grid RowDefinitions="*, *" ColumnDefinitions="*, *, *" Padding="15">
+
+            <ImageButton Source="table.png" Grid.Column="0" Grid.Row="0" Aspect="Center" Clicked="ImageButton_Clicked_3"
+                         SemanticProperties.Description="area"/>
+            <Label Text="مساحت" Grid.Column="0" Grid.Row="1" Style="{StaticResource Key=MainMenuLabel}"/>
+
+            <ImageButton Source="hd.png" Grid.Column="1" Grid.Row="0" Aspect="Center" Clicked="ImageButton_Clicked_4"
+                         SemanticProperties.Description="resolution"/>
+            <Label Text="دقت" Grid.Column="1" Grid.Row="1" Style="{StaticResource Key=MainMenuLabel}"/>
+
+            <ImageButton Source="time.png" Grid.Column="2" Grid.Row="0" Aspect="Center" Clicked="ImageButton_Clicked_5"
+                         SemanticProperties.Description="time"/>
+            <Label Text="زمان" Grid.Column="2" Grid.Row="1" Style="{StaticResource Key=MainMenuLabel}"/>
+        </Grid>
+
+        <!-- 3rd row -->
+        <Grid RowDefinitions="*, *" ColumnDefinitions="*, *, *" Padding="15">
+
+            <ImageButton Source="energy.png" Grid.Column="0" Grid.Row="0" Aspect="Center" Clicked="ImageButton_Clicked_6"
+                         SemanticProperties.Description="energy"/>
+            <Label Text="انرژی" Grid.Column="0" Grid.Row="1" Style="{StaticResource Key=MainMenuLabel}"/>
+
+            <ImageButton Source="speed.png" Grid.Column="1" Grid.Row="0" Aspect="Center" Clicked="ImageButton_Clicked_7"
+                         SemanticProperties.Description="speed"/>
+            <Label Text="سرعت" Grid.Column="1" Grid.Row="1" Style="{StaticResource Key=MainMenuLabel}"/>
+
+            <ImageButton Source="volume.png" Grid.Column="2" Grid.Row="0" Aspect="Center" Clicked="ImageButton_Clicked_8"
+                         SemanticProperties.Description="volume"/>
+            <Label Text="حجم" Grid.Column="2" Grid.Row="1" Style="{StaticResource Key=MainMenuLabel}"/>
+        </Grid>
+
+        <!-- 4th row -->
+        <Grid RowDefinitions="*, *" ColumnDefinitions="*, *, *" Padding="15">
+            
+            <ImageButton Source="pressure.png" Grid.Column="0" Grid.Row="0" Aspect="Center" Clicked="ImageButton_Clicked_9"
+                         SemanticProperties.Description="pressure"/>
+            <Label Text="فشار" Grid.Column="0" Grid.Row="1" Style="{StaticResource Key=MainMenuLabel}"/>
+
+            <ImageButton Source="memory.png" Grid.Column="1" Grid.Row="0" Aspect="Center" Clicked="ImageButton_Clicked_10"
+                         SemanticProperties.Description="memory"/>
+            <Label Text="حافظه" Grid.Column="1" Grid.Row="1" Style="{StaticResource Key=MainMenuLabel}"/>
+
+            <ImageButton Source="weight.png" Grid.Column="2" Grid.Row="0" Aspect="Center" Clicked="ImageButton_Clicked_11"
+                         SemanticProperties.Description="weight"/>
+            <Label Text="وزن" Grid.Column="2" Grid.Row="1" Style="{StaticResource Key=MainMenuLabel}"/>
+        </Grid>
+ 
+    </VerticalStackLayout>
+
+</ContentPage>

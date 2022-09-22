@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UnitConverter.pages.about"
+             Title="درباره" BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}">
+    <VerticalStackLayout>
+        <AbsoluteLayout Margin="20">
+
+            <Image Source="about.png" AbsoluteLayout.LayoutBounds="112,100">
+
+            </Image>
+
+            <!--the design of about page-->
+
+            <BoxView Color="{StaticResource Primary}"
+                 AbsoluteLayout.LayoutBounds="0, 10, 350, 5" />
+            <BoxView Color="{StaticResource Primary}"
+                 AbsoluteLayout.LayoutBounds="0, 20, 350, 5" />
+            <BoxView Color="{StaticResource Primary}"
+                 AbsoluteLayout.LayoutBounds="320, 0, 5, 600" />
+            <BoxView Color="{StaticResource Primary}"
+                 AbsoluteLayout.LayoutBounds="330, 0, 5, 600" />
+            <BoxView Color="{StaticResource Primary}"
+                 AbsoluteLayout.LayoutBounds="20, 0, 5, 600" />
+            <BoxView Color="{StaticResource Primary}"
+                 AbsoluteLayout.LayoutBounds="30, 0, 5, 600" />
+            <BoxView Color="{StaticResource Primary}"
+                 AbsoluteLayout.LayoutBounds="0, 570, 350, 5" />
+            <BoxView Color="{StaticResource Primary}"
+                 AbsoluteLayout.LayoutBounds="0, 580, 350, 5" />
+
+            <Label Text="برنامه نویس: مبین بیرانوند" AbsoluteLayout.LayoutBounds="110, 250"
+                   SemanticProperties.Description="programed by mobin and created with .Net MAUI 2022"
+                   Style="{StaticResource Key=AboutPageLabel1}"/>
+
+            <Label Text="https://t.me/mobin_beiranvand" AbsoluteLayout.LayoutBounds="45, 305"
+                   Style="{StaticResource Key=AboutPageLabel2}"/>
+
+            <Label Text="created with .Net MAUI" AbsoluteLayout.LayoutBounds="45, 330"
+                   Style="{StaticResource Key=AboutPageLabel2}"/>
+
+            <Label Text="version1.0" AbsoluteLayout.LayoutBounds="155, 605"
+                   Style="{StaticResource Key=AboutPageLabel3}"/>
+
+            <Label Text="2022" AbsoluteLayout.LayoutBounds="170, 620" 
+                   Style="{StaticResource Key=AboutPageLabel3}"/>
+        </AbsoluteLayout>
+    </VerticalStackLayout>
+    
+</ContentPage>

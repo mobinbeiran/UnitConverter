@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Name="shell"
+    x:Class="UnitConverter.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:UnitConverter" FlyoutBackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}"
+    Shell.FlyoutBehavior="Flyout" FlyoutBackdrop="{StaticResource TransparentBackdrop}" FlyoutItem.IsVisible="True">
+
+    <!--flyout and its options-->
+    <Shell.FlyoutContent>
+        <CollectionView BindingContext="{x:Reference shell}" ItemsSource="{Binding FlyoutItems}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="40,*,*" RowDefinitions="55,*" Padding="15" Margin="5,5,5,5" RowSpacing="5">
+
+                        <Button Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Text="درباره" Clicked="Button_Clicked_1"
+                                SemanticProperties.Description="about" Style="{StaticResource Key=FlyoutButton}"/>
+
+                        <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Text="خروج" Clicked="Button_Clicked"
+                                SemanticProperties.Description="exit" Style="{StaticResource Key=FlyoutButton}"/>
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Shell.FlyoutContent>
+
+    <!--flyout header-->
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Image Source="flyout.png" BackgroundColor="{StaticResource Primary}"/>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <!--flyout footer-->
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <Label Text="created with .Net MAUI  2022" Style="{StaticResource Key=FlyoutFooterLabel}"/>
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+
+    <ShellContent
+        Title="مبدل واحدات"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+</Shell>

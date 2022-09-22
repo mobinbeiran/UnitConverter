@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UnitConverter.pages.weight"
+             Title="مبدل واحدات" BackgroundColor="{AppThemeBinding Light={StaticResource Gray100}, Dark={StaticResource Gray900}}">
+
+    <VerticalStackLayout>
+        <!--the upper side entry, picker, image and label-->
+        <Image Source="weight.png" VerticalOptions="Start" HorizontalOptions="Center"/>
+        <Label Text="واحدات وزن" Style="{StaticResource Key=PagesUpperLabel}"/>
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="*" Padding="30,0,35,70">
+
+            <Entry x:Name="entry" Grid.Column="1" TextChanged="entry_TextChanged" IsEnabled="False"
+                    SemanticProperties.Description="enter the amount" Style="{StaticResource Key=PagesEntry}">
+            </Entry>
+
+            <Picker x:Name="picker" Title="انتخاب واحد" SelectedIndexChanged="picker_SelectedIndexChanged" SelectedIndex="-1"
+                    SemanticProperties.Description="choose a unit" Style="{StaticResource Key=PagesPicker}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>میکروگرام</x:String>
+                        <x:String>میلی گرام</x:String>
+                        <x:String>گرام</x:String>
+                        <x:String>کیلوگرام</x:String>
+                        <x:String>تن</x:String>
+                        <x:String>ستون</x:String>
+                        <x:String>پوند</x:String>
+                        <x:String>اونس</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+        </Grid>
+
+        <!--all the static and dynamic labels-->
+        <ScrollView>
+            <StackLayout BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray600}}" Margin="10">
+                <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*,*,*,*" Padding="35,0,0,75" Margin="0,0,65,0" RowSpacing="20">
+
+                    <Label x:Name="label1" Text="" Grid.Column="1" Grid.Row="0" SemanticProperties.Description="{Reference label1}"
+                           Style="{StaticResource Key=PagesDynamicLabels}"/>
+                    <Label Text="میکروگرام" Grid.Column="0" Grid.Row="0" Style="{StaticResource Key=PagesStaticLabels}"/>
+
+
+                    <Label x:Name="label2" Text="" Grid.Column="1" Grid.Row="1" SemanticProperties.Description="{Reference label2}"
+                           Style="{StaticResource Key=PagesDynamicLabels}"/>
+                    <Label Text="میلی گرام" Grid.Column="0" Grid.Row="1" Style="{StaticResource Key=PagesStaticLabels}"/>
+
+
+                    <Label x:Name="label3" Text="" Grid.Column="1" Grid.Row="2" SemanticProperties.Description="{Reference label3}"
+                           Style="{StaticResource Key=PagesDynamicLabels}"/>
+                    <Label Text="گرام" Grid.Column="0" Grid.Row="2" Style="{StaticResource Key=PagesStaticLabels}"/>
+
+
+                    <Label x:Name="label4" Text="" Grid.Column="1" Grid.Row="3" SemanticProperties.Description="{Reference label4}"
+                           Style="{StaticResource Key=PagesDynamicLabels}"/>
+                    <Label Text="کیلوگرام" Grid.Column="0" Grid.Row="3" Style="{StaticResource Key=PagesStaticLabels}"/>
+
+
+                    <Label x:Name="label5" Text="" Grid.Column="1" Grid.Row="4" SemanticProperties.Description="{Reference label5}"
+                           Style="{StaticResource Key=PagesDynamicLabels}"/>
+                    <Label Text="تن" Grid.Column="0" Grid.Row="4" Style="{StaticResource Key=PagesStaticLabels}"/>
+
+
+                    <Label x:Name="label6" Text="" Grid.Column="1" Grid.Row="5" SemanticProperties.Description="{Reference label6}"
+                           Style="{StaticResource Key=PagesDynamicLabels}"/>
+                    <Label Text="ستون" Grid.Column="0" Grid.Row="5" Style="{StaticResource Key=PagesStaticLabels}"/>
+
+
+                    <Label x:Name="label7" Text="" Grid.Column="1" Grid.Row="6" SemanticProperties.Description="{Reference label7}"
+                           Style="{StaticResource Key=PagesDynamicLabels}"/>
+                    <Label Text="پوند" Grid.Column="0" Grid.Row="6" Style="{StaticResource Key=PagesStaticLabels}"/>
+
+
+                    <Label x:Name="label8" Text="" Grid.Column="1" Grid.Row="7" SemanticProperties.Description="{Reference label8}"
+                           Style="{StaticResource Key=PagesDynamicLabels}"/>
+                    <Label Text="اونس" Grid.Column="0" Grid.Row="7" Style="{StaticResource Key=PagesStaticLabels}"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>
